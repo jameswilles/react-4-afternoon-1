@@ -14,7 +14,7 @@ export default class Student extends Component {
     return axios
       .get(`http://localhost:3005/students/${this.props.match.params.id}`)
       .then(results => {
-       this.state({
+       this.setState({
          studentInfo: results.data
        })
     })
